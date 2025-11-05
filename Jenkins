@@ -14,7 +14,7 @@ node
   notifyBuild('STARTED')
   stage('git checkout')
   {
-     git branch: 'development', url: 'https://github.com/kkdevopsb6/maven-webapplication-project-kkfunda.git'
+     git branch: 'development', url: 'https://github.com/jaisriram-123/maven-webapplication-project-kkfunda.git'
   }
   stage('Maven Build')
   {
@@ -36,7 +36,7 @@ node
         sh """
             curl -u kk:password \
             --upload-file /var/lib/jenkins/workspace/jio-dev-scriptedway-PL/target/maven-web-application.war \
-            "http://65.2.6.206:8080/manager/text/deploy?path=/maven-web-application&update=true"
+            "http://13.127.181.148:8080/manager/text/deploy?path=/maven-web-application&update=true"
         """
     }
     }  //try ending
